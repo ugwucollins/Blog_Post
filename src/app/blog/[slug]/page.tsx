@@ -1,11 +1,9 @@
 import getPosts from "../../../../lib/getPosts";
 import { MDXRemote } from "next-mdx-remote/rsc";
-
 export default function page({ params }: { params: any }) {
   console.log({ looks: params });
   const finding = decodeURI(params.slug);
   const usersPost = getPosts(finding);
-  console.log(`Data Logged: ${usersPost}`);
 
   return (
     <>
