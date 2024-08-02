@@ -28,7 +28,9 @@ export default function UserDate() {
                 {/* <Link href={`/blog/${post.slug}`} key={post.frontmatter.id}>
                   {post.frontmatter.Title}
                 </Link> */}
-                <Link href={`/blog/${post.slug}`}>{post.slug}</Link>
+                <Link href={`/blog/${post.slug}`} className="text-black">
+                  {post.slug}
+                </Link>
               </div>
               <div className="px-2 text-slate-600 text-xs font-medium mb-2">
                 {post.frontmatter.DateTimeLine}
