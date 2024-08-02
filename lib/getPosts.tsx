@@ -2,10 +2,10 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import getProps from "./getProps";
-
+type slug = typeof getProps;
 export default async function getPosts(blog: any) {
   console.log({ pathNamesblog: blog });
-  const slug = await getProps();
+  // const slug = await getProps();
   const pathName = path.join("posts", blog + ".md");
 
   const markdownWith = fs.readFileSync(pathName, "utf-8");
